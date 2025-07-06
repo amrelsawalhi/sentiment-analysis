@@ -1,0 +1,11 @@
+# Ignore raw and intermediate data
+/data
+
+# Ignore all generated models except the main model directory is now tracked
+/models/
+
+# Bytecode, cache, system files
+__pycache__/
+*.pyc
+.DS_Store
+.env

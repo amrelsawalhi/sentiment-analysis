@@ -41,30 +41,30 @@ FeelyText is an interactive sentiment analysis tool powered by machine learning 
 ## 🔄 Pipeline Overview
 
 ### 1. **Data Ingestion & Preparation**
-- Supports multiple schemas: Amazon reviews, Kaggle sentiment data, and news headlines.
-- `Prepare_data.py` detects schema and merges all into a standard format.
+- Supports multiple input formats: Amazon reviews, Kaggle sentiment datasets, and news headlines.
+- `prepare_data.py` automatically detects schema and standardizes all inputs into a unified format.
 
-### 2. **Data Cleaning**
-- `Clean_data.py` performs:
-  - Lowercasing
-  - Regex cleanup
+### 2. **Text Cleaning & Processing**
+- `clean_data.py` applies a full NLP cleaning pipeline:
+  - Lowercasing & punctuation removal (Regex)
   - Lemmatization (via spaCy)
-  - Stopword filtering (customizable)
+  - Custom stopword filtering
+- Output is saved to `/data/clean` for downstream use.
 
-### 3. **Training & Versioning**
+### 3. **Model Training & Version Control**
 - `train_model.py`:
-  - Detects new or updated files using `raw_state.json`
-  - Triggers `Prepare_data.py` and `Clean_data.py`
-  - Vectorizes text (TF-IDF), trains logistic regression
-  - Saves new model/version only if accuracy improves
-  - Updates production artifacts and `metrics.json`
+  - Detects new or modified data via `raw_state.json`
+  - Triggers preparation and cleaning if needed
+  - Trains a logistic regression model with TF-IDF vectorization
+  - Evaluates performance — updates production model only if accuracy improves
+  - Saves updated artifacts (`model.pkl`, `vectorizer.pkl`, `metrics.json`)
 
 ### 4. **Interactive Streamlit App**
-- Users can:
-  - Input text or upload `.txt` files (no header, one row per text)
-  - Get sentiment predictions with confidence scores
-  - Submit corrected labels for feedback
-- Feedback is stored for potential fine-tuning.
+- `streamlit_app.py` lets users:
+  - Type or upload text for sentiment prediction
+  - See predicted label and model confidence
+  - Submit corrected labels to feed a user-driven feedback loop
+- Feedback is saved locally (`user_feedback.csv`) for future fine-tuning.
 
 ---
 

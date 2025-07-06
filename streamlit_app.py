@@ -21,7 +21,7 @@ else:
     model_version = model_accuracy = training_size = "?"
 
 # === UI Header === #
-st.title("🧠 Sentiment Analysis Tool")
+st.title("🧠 FeelyText - Sentiment Analysis Tool")
 st.markdown("Upload a `.txt` file (no header, one line per row) **or** enter a text manually.")
 st.markdown("---")
 

@@ -14,8 +14,8 @@ This repository contains an end-to-end sentiment analysis pipeline built with Py
 ## 📁 Project Structure
 ```
 ├── data/
-│ ├── raw/ # Raw data files (Kaggle, Amazon, News)
-│ ├── clean/ # Cleaned and lemmatized data
+│ ├── raw/ 
+│ ├── clean/ 
 │ ├── raw_state.json # Tracks last modification timestamps
 │ └── user_feedback.csv # User corrections collected via Streamlit
 │

@@ -52,9 +52,8 @@ if text_input.strip():
     )
 
     if st.button("✅ Submit Feedback"):
-        df = pd.DataFrame([{"text": text_input, "sentiment": corrected}])
-        feedback_path = "data/user_feedback.csv"
-        df.to_csv(feedback_path, mode="a", index=False, header=not os.path.exists(feedback_path))
+       
+
         st.success("Feedback submitted.")
 
 # === Multi-line TXT Upload Mode === #
@@ -79,9 +78,7 @@ elif uploaded_file:
         st.markdown("---")
 
     if st.button("✅ Submit All Feedback"):
-        df_feedback = pd.DataFrame(corrected_labels, columns=["text", "sentiment"])
-        feedback_path = "data/user_feedback.csv"
-        df_feedback.to_csv(feedback_path, mode="a", index=False, header=not os.path.exists(feedback_path))
+
         st.success("Feedback submitted.")
 
 else:

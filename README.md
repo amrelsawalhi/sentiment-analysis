@@ -1,13 +1,11 @@
-# 🧠 Sentiment Analysis Pipeline with Feedback Loop
+<p align="center">
+  <img src="https://github.com/amrelsawalhi/sentiment-analysis/blob/3cc1c86d7477ad723bf516f18ae305c2b3ebfa07/textyfeel.png?raw=true" alt="FeelyText Banner" style="max-width: 100%;">
+</p>
 
-This repository contains an end-to-end sentiment analysis pipeline built with Python. It covers:
+# 🧠 FeelyText – Real-time Sentiment Analyzer
 
-- Raw data ingestion from multiple formats (CSV/JSON)
-- Schema detection and data preparation
-- Text cleaning and lemmatization
-- Model training and versioning
-- Interactive Streamlit app with feedback loop
-- Model metadata tracking
+FeelyText is an interactive sentiment analysis tool powered by machine learning and NLP. It lets users type or upload text, view predicted sentiment, and provide feedback to improve future predictions.
+
 
 ---
 

@@ -12,7 +12,7 @@ This repository contains an end-to-end sentiment analysis pipeline built with Py
 ---
 
 ## 📁 Project Structure
-
+```
 ├── data/
 │ ├── raw/ # Raw data files (Kaggle, Amazon, News)
 │ ├── clean/ # Cleaned and lemmatized data
@@ -35,7 +35,7 @@ This repository contains an end-to-end sentiment analysis pipeline built with Py
 ├── streamlit_app.py # Front-end app for predictions and feedback
 ├── requirements.txt
 └── README.md
-
+```
 
 
 ---
@@ -71,24 +71,20 @@ This repository contains an end-to-end sentiment analysis pipeline built with Py
 ---
 
 ## 📊 Model Metadata Example
-
-```json
+```
+json
 {
   "version": 4,
   "accuracy": 0.8381,
   "training_size": 147871
 }
-
+```
 🚀 Running the App
 Install dependencies:
-
-bash
-Copy
-Edit
+```
 pip install -r requirements.txt
+```
 Launch the app locally:
-
-bash
-Copy
-Edit
+```
 streamlit run streamlit_app.py
+```
